@@ -5,11 +5,11 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const benefits = [
-  "Expert team of developers and designers",
-  "Cutting-edge technology stack",
-  "Dedicated project management",
-  "Post-launch support and maintenance",
-  "Scalable solutions for growing businesses"
+  "Equipe especializada de desenvolvedores e designers",
+  "Stack de tecnologia de ponta",
+  "Gerenciamento de projeto dedicado",
+  "Suporte e manutenção pós-lançamento",
+  "Soluções escaláveis para empresas em crescimento"
 ];
 
 export default function CallToAction() {
@@ -19,13 +19,13 @@ export default function CallToAction() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-              Ready to Start?
+              Pronto para Começar?
             </span>
             <h2 className="text-3xl font-bold">
-              Let's Transform Your Digital Presence Together
+              Vamos Transformar Sua Presença Digital Juntos
             </h2>
             <p className="text-lg text-muted-foreground">
-              Partner with SoftTech Innovations and take your business to the next level with our comprehensive digital solutions.
+              Faça parceria com a SoftTech Innovations e leve seu negócio para o próximo nível com nossas soluções digitais abrangentes.
             </p>
             
             <div className="space-y-3">
@@ -40,13 +40,13 @@ export default function CallToAction() {
             <div className="pt-4 flex flex-wrap gap-4">
               <Link to="/contact">
                 <Button size="lg" className="group">
-                  Contact Us
+                  Fale Conosco
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>
               <Link to="/services">
                 <Button variant="outline" size="lg">
-                  Learn More
+                  Saiba Mais
                 </Button>
               </Link>
             </div>
@@ -55,9 +55,9 @@ export default function CallToAction() {
           <div className="relative">
             <div className="relative z-10 rounded-xl overflow-hidden bg-white p-8 shadow-xl border border-border">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">Get a Free Consultation</h3>
+                <h3 className="text-2xl font-bold mb-2">Obtenha uma Consulta Gratuita</h3>
                 <p className="text-muted-foreground">
-                  Have a project in mind? Let's discuss how we can help.
+                  Tem um projeto em mente? Vamos discutir como podemos ajudar.
                 </p>
               </div>
               
@@ -65,22 +65,22 @@ export default function CallToAction() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="first-name" className="text-sm font-medium">
-                      First Name
+                      Nome
                     </label>
                     <input
                       id="first-name"
                       className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder="John"
+                      placeholder="João"
                     />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="last-name" className="text-sm font-medium">
-                      Last Name
+                      Sobrenome
                     </label>
                     <input
                       id="last-name"
                       className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder="Doe"
+                      placeholder="Silva"
                     />
                   </div>
                 </div>
@@ -93,48 +93,48 @@ export default function CallToAction() {
                     id="email"
                     type="email"
                     className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="john.doe@example.com"
+                    placeholder="joao.silva@exemplo.com"
                   />
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="company" className="text-sm font-medium">
-                    Company
+                    Empresa
                   </label>
                   <input
                     id="company"
                     className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="Your Company Ltd."
+                    placeholder="Sua Empresa Ltda."
                   />
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
-                    Message
+                    Mensagem
                   </label>
                   <textarea
                     id="message"
                     rows={4}
                     className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    placeholder="Tell us about your project..."
+                    placeholder="Conte-nos sobre seu projeto..."
                   />
                 </div>
                 
                 <Button type="submit" className="w-full">
-                  Submit
+                  Enviar
                 </Button>
                 
                 <p className="text-xs text-center text-muted-foreground">
-                  By submitting this form, you agree to our{" "}
+                  Ao enviar este formulário, você concorda com nossa{" "}
                   <Link to="/privacy" className="text-primary hover:underline">
-                    Privacy Policy
+                    Política de Privacidade
                   </Link>
                   .
                 </p>
               </form>
             </div>
             
-            {/* Decorative elements */}
+            {/* Elementos decorativos */}
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary/10 rounded-lg z-0"></div>
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary rounded-lg z-0"></div>
           </div>

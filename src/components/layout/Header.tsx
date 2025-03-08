@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Início", path: "/" },
+  { name: "Serviços", path: "/services" },
+  { name: "Portfólio", path: "/portfolio" },
+  { name: "Sobre", path: "/about" },
+  { name: "Contato", path: "/contact" },
 ];
 
 export default function Header() {
@@ -27,7 +27,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when changing routes
+  // Fecha o menu móvel ao mudar de rota
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
@@ -51,7 +51,7 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Navegação Desktop */}
         <nav className="hidden md:flex items-center space-x-1">
           {navLinks.map((link) => (
             <Link
@@ -70,19 +70,19 @@ export default function Header() {
               )}
             </Link>
           ))}
-          <Button className="ml-4 shadow-sm">Get Started</Button>
+          <Button className="ml-4 shadow-sm">Começar</Button>
         </nav>
 
-        {/* Mobile Menu Toggle */}
+        {/* Botão Menu Mobile */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden relative z-10 p-2"
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
 
-        {/* Mobile Navigation */}
+        {/* Navegação Mobile */}
         {isMenuOpen && (
           <div className="md:hidden fixed inset-0 bg-background/95 backdrop-blur-sm z-0 flex items-center justify-center">
             <nav className="flex flex-col items-center space-y-6 p-8 animate-fade-in">
@@ -103,7 +103,7 @@ export default function Header() {
               <Button 
                 className="mt-4 w-full shadow-sm stagger-5 animate-fade-in-up"
               >
-                Get Started
+                Começar
               </Button>
             </nav>
           </div>

@@ -8,33 +8,33 @@ import { Link } from "react-router-dom";
 const services = [
   {
     icon: <Code className="h-6 w-6" />,
-    title: "Web Development",
-    description: "Custom websites built with the latest technologies for optimal performance and user experience."
+    title: "Desenvolvimento Web",
+    description: "Sites personalizados construídos com as tecnologias mais recentes para desempenho e experiência do usuário ideais."
   },
   {
     icon: <Smartphone className="h-6 w-6" />,
-    title: "Mobile Applications",
-    description: "Native and cross-platform mobile apps that provide seamless experiences across all devices."
+    title: "Aplicativos Móveis",
+    description: "Aplicativos móveis nativos e multiplataforma que proporcionam experiências perfeitas em todos os dispositivos."
   },
   {
     icon: <Palette className="h-6 w-6" />,
-    title: "UI/UX Design",
-    description: "Beautiful, intuitive interfaces designed to enhance user engagement and satisfaction."
+    title: "Design UI/UX",
+    description: "Interfaces bonitas e intuitivas projetadas para melhorar o engajamento e a satisfação do usuário."
   },
   {
     icon: <Database className="h-6 w-6" />,
-    title: "SaaS Development",
-    description: "Scalable software-as-a-service solutions tailored to your business requirements."
+    title: "Desenvolvimento SaaS",
+    description: "Soluções de software como serviço escaláveis adaptadas às necessidades do seu negócio."
   },
   {
     icon: <BarChart className="h-6 w-6" />,
-    title: "Digital Transformation",
-    description: "Strategic guidance and implementation to modernize your business processes."
+    title: "Transformação Digital",
+    description: "Orientação estratégica e implementação para modernizar seus processos de negócios."
   },
   {
     icon: <Lock className="h-6 w-6" />,
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets and customer data."
+    title: "Cibersegurança",
+    description: "Soluções de segurança abrangentes para proteger seus ativos digitais e dados de clientes."
   }
 ];
 
@@ -65,13 +65,13 @@ export default function Services() {
       <Container>
         <div className="max-w-2xl mx-auto text-center mb-16">
           <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-            Our Services
+            Nossos Serviços
           </span>
           <h2 className="text-3xl font-bold mb-4">
-            Comprehensive Digital Solutions
+            Soluções Digitais Abrangentes
           </h2>
           <p className="text-lg text-muted-foreground">
-            We offer a full range of services to help your business succeed in the digital world
+            Oferecemos uma gama completa de serviços para ajudar sua empresa a ter sucesso no mundo digital
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function Services() {
                 to="/services" 
                 className="text-primary font-medium inline-flex items-center hover:underline group"
               >
-                Learn more 
+                Saiba mais 
                 <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -103,7 +103,7 @@ export default function Services() {
         <div className="text-center mt-12">
           <Link to="/services">
             <Button>
-              View All Services
+              Ver Todos os Serviços
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>

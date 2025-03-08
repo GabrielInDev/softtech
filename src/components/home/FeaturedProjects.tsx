@@ -7,23 +7,23 @@ import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
-    title: "Fintech Dashboard",
-    category: "Web Application",
-    description: "Modern financial dashboard with real-time data visualization and account management capabilities.",
+    title: "Painel Financeiro",
+    category: "Aplicação Web",
+    description: "Painel financeiro moderno com visualização de dados em tempo real e recursos de gerenciamento de contas.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     link: "/portfolio"
   },
   {
-    title: "Health & Wellness App",
-    category: "Mobile Application",
-    description: "Cross-platform mobile application for fitness tracking, nutrition planning, and wellness monitoring.",
+    title: "App de Saúde & Bem-estar",
+    category: "Aplicativo Móvel",
+    description: "Aplicativo móvel multiplataforma para rastreamento de atividades físicas, planejamento nutricional e monitoramento de bem-estar.",
     image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2032&q=80",
     link: "/portfolio"
   },
   {
-    title: "E-commerce Platform",
-    category: "Web Development",
-    description: "Full-featured e-commerce solution with inventory management, payment processing, and analytics.",
+    title: "Plataforma de E-commerce",
+    category: "Desenvolvimento Web",
+    description: "Solução de e-commerce completa com gerenciamento de estoque, processamento de pagamentos e análises.",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     link: "/portfolio"
   }
@@ -57,18 +57,18 @@ export default function FeaturedProjects() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div className="max-w-2xl">
             <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Our Portfolio
+              Nosso Portfólio
             </span>
             <h2 className="text-3xl font-bold mb-4">
-              Featured Projects
+              Projetos em Destaque
             </h2>
             <p className="text-lg text-muted-foreground">
-              Explore our recent work and see how we've helped our clients achieve their digital goals
+              Explore nossos trabalhos recentes e veja como ajudamos nossos clientes a alcançar seus objetivos digitais
             </p>
           </div>
           <Link to="/portfolio" className="mt-4 md:mt-0">
             <Button variant="outline">
-              View All Projects
+              Ver Todos os Projetos
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -94,7 +94,7 @@ export default function FeaturedProjects() {
                     to={project.link}
                     className="text-white flex items-center gap-1 font-medium"
                   >
-                    View Project <ExternalLink className="h-4 w-4 ml-1" />
+                    Ver Projeto <ExternalLink className="h-4 w-4 ml-1" />
                   </Link>
                 </div>
               </div>

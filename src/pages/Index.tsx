@@ -12,11 +12,11 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>SoftTech Innovations | Website & SaaS Development</title>
-        <meta name="description" content="SoftTech Innovations provides cutting-edge website and SaaS development services to help your business thrive in the digital landscape." />
-        <meta name="keywords" content="web development, SaaS, mobile apps, UI/UX design, digital transformation" />
-        <meta property="og:title" content="SoftTech Innovations | Website & SaaS Development" />
-        <meta property="og:description" content="Transforming businesses through innovative digital solutions." />
+        <title>SoftTech Innovations | Desenvolvimento de Websites & SaaS</title>
+        <meta name="description" content="A SoftTech Innovations oferece serviços de desenvolvimento de websites e SaaS de ponta para ajudar sua empresa a prosperar no cenário digital." />
+        <meta name="keywords" content="desenvolvimento web, SaaS, aplicativos móveis, design UI/UX, transformação digital" />
+        <meta property="og:title" content="SoftTech Innovations | Desenvolvimento de Websites & SaaS" />
+        <meta property="og:description" content="Transformando empresas através de soluções digitais inovadoras." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://softtech-innovations.com" />
         <link rel="canonical" href="https://softtech-innovations.com" />

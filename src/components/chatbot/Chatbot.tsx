@@ -14,17 +14,17 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: 1,
-    text: "Hi there! 👋 I'm the SoftTech virtual assistant. How can I help you today?",
+    text: "Olá! 👋 Eu sou o assistente virtual da SoftTech. Como posso ajudar você hoje?",
     isBot: true,
     timestamp: new Date()
   }
 ];
 
 const quickReplies = [
-  "Tell me about your services",
-  "How much does a website cost?",
-  "Do you offer mobile app development?",
-  "What's your process like?"
+  "Fale sobre seus serviços",
+  "Quanto custa um website?",
+  "Vocês oferecem desenvolvimento de aplicativos?",
+  "Como é o processo de trabalho de vocês?"
 ];
 
 export default function Chatbot() {
@@ -35,19 +35,19 @@ export default function Chatbot() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Auto-scroll to bottom when messages change
+  // Auto-rolagem para o final quando as mensagens mudam
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Focus input when chat opens
+  // Foco no input quando o chat abre
   useEffect(() => {
     if (isOpen && !isMinimized) {
       inputRef.current?.focus();
     }
   }, [isOpen, isMinimized]);
 
-  // Show chatbot after a delay
+  // Mostrar chatbot após um atraso
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
@@ -60,7 +60,7 @@ export default function Chatbot() {
     e.preventDefault();
     if (!inputValue.trim()) return;
 
-    // Add user message
+    // Adicionar mensagem do usuário
     const userMessage: Message = {
       id: messages.length + 1,
       text: inputValue,
@@ -71,7 +71,7 @@ export default function Chatbot() {
     setMessages([...messages, userMessage]);
     setInputValue("");
 
-    // Simulate bot thinking
+    // Simular bot pensando
     setTimeout(() => {
       const botResponse = getBotResponse(inputValue);
       setMessages(prev => [...prev, botResponse]);
@@ -79,7 +79,7 @@ export default function Chatbot() {
   };
 
   const handleQuickReply = (reply: string) => {
-    // Add user message (quick reply)
+    // Adicionar mensagem do usuário (resposta rápida)
     const userMessage: Message = {
       id: messages.length + 1,
       text: reply,
@@ -89,7 +89,7 @@ export default function Chatbot() {
     
     setMessages([...messages, userMessage]);
 
-    // Simulate bot thinking
+    // Simular bot pensando
     setTimeout(() => {
       const botResponse = getBotResponse(reply);
       setMessages(prev => [...prev, botResponse]);
@@ -99,19 +99,19 @@ export default function Chatbot() {
   const getBotResponse = (input: string): Message => {
     const lowerInput = input.toLowerCase();
     
-    // Simple response logic
-    let responseText = "I'm not sure how to help with that. Would you like to speak with a human? Please use our contact form to get in touch.";
+    // Lógica de resposta simples
+    let responseText = "Não tenho certeza de como ajudar com isso. Gostaria de falar com um humano? Por favor, use nosso formulário de contato para entrar em contato.";
     
-    if (lowerInput.includes("service") || lowerInput.includes("offer")) {
-      responseText = "We offer web development, mobile app development, UI/UX design, and SaaS solutions. Would you like to know more about any specific service?";
-    } else if (lowerInput.includes("cost") || lowerInput.includes("price") || lowerInput.includes("how much")) {
-      responseText = "Our pricing depends on your specific requirements. For a custom quote, please fill out our contact form and we'll get back to you within 24 hours.";
-    } else if (lowerInput.includes("mobile") || lowerInput.includes("app")) {
-      responseText = "Yes, we develop both native and cross-platform mobile applications for iOS and Android. Our team specializes in React Native, Flutter, and native development.";
-    } else if (lowerInput.includes("process") || lowerInput.includes("how do you")) {
-      responseText = "Our process typically includes discovery, planning, design, development, testing, and launch phases. We maintain clear communication throughout the project.";
-    } else if (lowerInput.includes("contact") || lowerInput.includes("talk") || lowerInput.includes("human")) {
-      responseText = "You can reach us through our contact form, by email at info@softtech-innovations.com, or by phone at +1 (555) 123-4567.";
+    if (lowerInput.includes("serviço") || lowerInput.includes("oferecem")) {
+      responseText = "Oferecemos desenvolvimento web, desenvolvimento de aplicativos móveis, design UI/UX e soluções SaaS. Gostaria de saber mais sobre algum serviço específico?";
+    } else if (lowerInput.includes("custo") || lowerInput.includes("preço") || lowerInput.includes("quanto custa")) {
+      responseText = "Nossos preços dependem dos seus requisitos específicos. Para um orçamento personalizado, preencha nosso formulário de contato e entraremos em contato em até 24 horas.";
+    } else if (lowerInput.includes("móvel") || lowerInput.includes("aplicativo") || lowerInput.includes("app")) {
+      responseText = "Sim, desenvolvemos aplicativos móveis nativos e multiplataforma para iOS e Android. Nossa equipe é especializada em React Native, Flutter e desenvolvimento nativo.";
+    } else if (lowerInput.includes("processo") || lowerInput.includes("como vocês")) {
+      responseText = "Nosso processo geralmente inclui as fases de descoberta, planejamento, design, desenvolvimento, testes e lançamento. Mantemos uma comunicação clara durante todo o projeto.";
+    } else if (lowerInput.includes("contato") || lowerInput.includes("falar") || lowerInput.includes("humano")) {
+      responseText = "Você pode nos contatar através do nosso formulário de contato, por e-mail em contato@softtech-innovations.com ou por telefone em +55 (11) 1234-5678.";
     }
     
     return {
@@ -142,7 +142,7 @@ export default function Chatbot() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-      {/* Chat Window */}
+      {/* Janela do Chat */}
       {isOpen && (
         <div
           className={cn(
@@ -152,31 +152,31 @@ export default function Chatbot() {
         >
           {!isMinimized ? (
             <>
-              {/* Header */}
+              {/* Cabeçalho */}
               <div className="bg-primary text-white p-4 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                   <MessageSquare className="h-5 w-5" />
-                  <h3 className="font-medium">SoftTech Assistant</h3>
+                  <h3 className="font-medium">Assistente SoftTech</h3>
                 </div>
                 <div className="flex items-center gap-2">
                   <button
                     onClick={minimizeChat}
                     className="text-white/80 hover:text-white transition-colors"
-                    aria-label="Minimize chat"
+                    aria-label="Minimizar chat"
                   >
                     <MinusCircle className="h-5 w-5" />
                   </button>
                   <button
                     onClick={closeChat}
                     className="text-white/80 hover:text-white transition-colors"
-                    aria-label="Close chat"
+                    aria-label="Fechar chat"
                   >
                     <X className="h-5 w-5" />
                   </button>
                 </div>
               </div>
 
-              {/* Messages */}
+              {/* Mensagens */}
               <div className="p-4 h-80 overflow-y-auto">
                 {messages.map((message) => (
                   <div
@@ -204,10 +204,10 @@ export default function Chatbot() {
                 <div ref={messagesEndRef} />
               </div>
 
-              {/* Quick Replies */}
+              {/* Respostas Rápidas */}
               {messages.length < 3 && (
                 <div className="px-4 pb-2">
-                  <p className="text-xs text-muted-foreground mb-2">Suggested questions:</p>
+                  <p className="text-xs text-muted-foreground mb-2">Perguntas sugeridas:</p>
                   <div className="flex flex-wrap gap-2">
                     {quickReplies.map((reply) => (
                       <button
@@ -230,7 +230,7 @@ export default function Chatbot() {
                     type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
-                    placeholder="Type your message..."
+                    placeholder="Digite sua mensagem..."
                     className="flex-1 p-2 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 text-sm"
                   />
                   <Button type="submit" size="sm" className="aspect-square p-2">
@@ -245,17 +245,17 @@ export default function Chatbot() {
               onClick={() => setIsMinimized(false)}
             >
               <MessageSquare className="h-5 w-5" />
-              <span className="font-medium">Chat with us</span>
+              <span className="font-medium">Fale conosco</span>
             </div>
           )}
         </div>
       )}
 
-      {/* Toggle Button */}
+      {/* Botão de Alternância */}
       <Button
         onClick={toggleChat}
         className="rounded-full h-14 w-14 shadow-lg"
-        aria-label={isOpen ? "Close chat" : "Open chat"}
+        aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
       >
         <MessageSquare className="h-6 w-6" />
       </Button>
